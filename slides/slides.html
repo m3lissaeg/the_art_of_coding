@@ -116,8 +116,8 @@
       The Art of Coding
     </div>
     <nav class="hidden md:flex gap-8 items-center">
-      <a class="text-[#b72119] dark:text-[#b72119] font-bold border-b-2 border-[#b72119] font-mono text-xs uppercase hover:text-[#0047ab] transition-colors duration-50" href="#hero">Roots</a>
-      <a class="text-[#363636] dark:text-[#faf9f4] font-mono text-xs uppercase hover:text-[#0047ab] transition-colors duration-50" href="#grammar">Grammar</a>
+      <a class="text-[#b72119] dark:text-[#b72119] font-bold border-b-2 border-[#b72119] font-mono text-xs uppercase hover:text-[#0047ab] transition-colors duration-50" href="#grammar">Grammar</a>
+      <a class="text-[#363636] dark:text-[#faf9f4] font-mono text-xs uppercase hover:text-[#0047ab] transition-colors duration-50" href="#roots">Roots</a>
       <a class="text-[#363636] dark:text-[#faf9f4] font-mono text-xs uppercase hover:text-[#0047ab] transition-colors duration-50" href="#shift">Shift</a>
       <a class="text-[#363636] dark:text-[#faf9f4] font-mono text-xs uppercase hover:text-[#0047ab] transition-colors duration-50" href="#symphony">Symphony</a>
     </nav>
@@ -205,11 +205,59 @@
         </div>
       </div>
     </section>
+    <!-- Section 3: The Grammar -->
+    <section class="py-32 px-6 md:px-12 bg-primary text-white" id="grammar">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16">
+        <div class="md:col-span-4">
+          <h2 class="text-6xl font-bold font-headline tracking-tighter mb-8 text-on-primary-container">01.<br/>THE<br/>GRAMMAR OF WONDER</h2>
+          <p class="font-mono text-sm leading-loose opacity-80">The Mathematical Substrate of the Dream. How simple instructions yield infinite complexity.</p>
+        </div>
+        <div class="md:col-span-8">
+          <div class="border border-white/20 p-8 md:p-12 space-y-8 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 text-[10px] font-mono opacity-30">FIG. B</div>
+            <h4 class="text-3xl font-bold font-headline uppercase text-on-primary-container">Kaprekar's Constant</h4>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div class="space-y-6">
+                <p class="text-sm opacity-80 leading-relaxed">
+                  D.R. Kaprekar discovered that if you take any 4-digit number (where not all digits are the same), arrange its digits in descending order, subtract the ascending order, and repeat the process, you will always reach exactly one number in at most 7 iterations.
+                </p>
+                <div class="flex items-center gap-4">
+                  <div class="h-[1px] w-12 bg-white/30"></div>
+                  <span class="text-5xl font-black font-headline tracking-widest">6174</span>
+                </div>
+              </div>
+
+              <div class="bg-black/20 p-6 font-mono text-sm space-y-4 border border-white/10">
+                <div class="text-[10px] uppercase tracking-widest opacity-50 mb-4">// Iterative execution</div>
+                <div class="flex items-center gap-4 opacity-80">
+                  <span class="w-12 text-right">3524</span>
+                  <span class="text-primary-fixed">→</span>
+                  <span>5432 - 2345 = <b>3087</b></span>
+                </div>
+                <div class="flex items-center gap-4 opacity-80">
+                  <span class="w-12 text-right">3087</span>
+                  <span class="text-primary-fixed">→</span>
+                  <span>8730 - 0378 = <b>8352</b></span>
+                </div>
+                <div class="flex items-center gap-4 text-white">
+                  <span class="w-12 text-right">8352</span>
+                  <span class="text-secondary">→</span>
+                  <span>8532 - 2358 = <b class="text-secondary text-base">6174</b></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Section 3: The Roots (1960-1975) -->
     <section id="roots" class="py-32 px-6 md:px-12">
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-baseline border-b-4 border-primary pb-4 mb-16">
-          <h2 class="text-7xl font-bold text-primary font-headline tracking-tighter">01. THE ROOTS</h2>
+          <h2 class="text-7xl font-bold text-primary font-headline tracking-tighter">02. THE ROOTS</h2>
           <span class="font-mono text-sm tracking-widest opacity-50 uppercase">Era: 1960 — 1975</span>
         </div>
 
@@ -285,54 +333,6 @@
               <img src="https://static01.nyt.com/images/2016/05/09/obituaries/20160509cohen-obit-slide-3VIK/20160509cohen-obit-slide-3VIK-articleLarge.jpg?quality=75&auto=webp&disable=upscale">
               <img src="https://whitneymedia.org/assets/image/829948/large_T_2023_209_cropped.jpg">
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3: The Grammar -->
-    <section class="py-32 px-6 md:px-12 bg-primary text-white" id="grammar">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16">
-        <div class="md:col-span-4">
-          <h2 class="text-6xl font-bold font-headline tracking-tighter mb-8 text-on-primary-container">02.<br/>THE<br/>GRAMMAR OF WONDER</h2>
-          <p class="font-mono text-sm leading-loose opacity-80">The Mathematical Substrate of the Dream. How simple instructions yield infinite complexity.</p>
-        </div>
-        <div class="md:col-span-8">
-          <div class="border border-white/20 p-8 md:p-12 space-y-8 relative overflow-hidden">
-            <div class="absolute top-0 right-0 p-4 text-[10px] font-mono opacity-30">FIG. B</div>
-            <h4 class="text-3xl font-bold font-headline uppercase text-on-primary-container">Kaprekar's Constant</h4>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div class="space-y-6">
-                <p class="text-sm opacity-80 leading-relaxed">
-                  D.R. Kaprekar discovered that if you take any 4-digit number (where not all digits are the same), arrange its digits in descending order, subtract the ascending order, and repeat the process, you will always reach exactly one number in at most 7 iterations.
-                </p>
-                <div class="flex items-center gap-4">
-                  <div class="h-[1px] w-12 bg-white/30"></div>
-                  <span class="text-5xl font-black font-headline tracking-widest">6174</span>
-                </div>
-              </div>
-
-              <div class="bg-black/20 p-6 font-mono text-sm space-y-4 border border-white/10">
-                <div class="text-[10px] uppercase tracking-widest opacity-50 mb-4">// Iterative execution</div>
-                <div class="flex items-center gap-4 opacity-80">
-                  <span class="w-12 text-right">3524</span>
-                  <span class="text-primary-fixed">→</span>
-                  <span>5432 - 2345 = <b>3087</b></span>
-                </div>
-                <div class="flex items-center gap-4 opacity-80">
-                  <span class="w-12 text-right">3087</span>
-                  <span class="text-primary-fixed">→</span>
-                  <span>8730 - 0378 = <b>8352</b></span>
-                </div>
-                <div class="flex items-center gap-4 text-white">
-                  <span class="w-12 text-right">8352</span>
-                  <span class="text-secondary">→</span>
-                  <span>8532 - 2358 = <b class="text-secondary text-base">6174</b></span>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
