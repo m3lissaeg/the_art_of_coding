@@ -23,20 +23,15 @@ def generate_and_play():
     author = input("Enter Author: ")
 
     prompt = f"""
-    Act as an algorithmic music composer for Sonic Pi (Ruby-based).
-    Create a short musical sketch inspired by the painting '{painting}' by {author}.
+      You are a Sonic Pi Code Generator.
+      Task: Generate a Ruby script for the painting '{painting}' by {author}.
 
-    Constraints:
-    - Use Ruby syntax compatible with Sonic Pi.
-    - Focus on 'programmer happiness': clean, readable code.
-    - Use comments to explain the visual-to-musical mapping.
-    - Return ONLY the code. No conversational text. No markdown backticks.
-
-    STRICT SYNTAX RULES:
-    1. Only use these verified Sonic Pi synths: :sine, :saw, :prophet, :hollow, :pluck, :piano, :blade, :pretty_bell, :chipbass.
-    2. Do not use :plucked or :string.
-    3. Use 'live_loop' for continuous patterns.
-    4. Return ONLY the Ruby code block.
+      STRICT RULES:
+      1. Output MUST be RAW Ruby code only.
+      2. NO markdown formatting, NO backticks, NO "Here is your code" text.
+      3. Use ONLY # for comments. Ensure every comment is on its own new line.
+      4. Use 'get(:vol, 0.5)' for all amp: values.
+      5. Avoid complex one-liners; keep logic simple to prevent syntax errors.
     """
 
     print(f"\n🎨 Consulting the Muse for '{painting}'...")
@@ -77,4 +72,35 @@ if __name__ == "__main__":
 
 #   puts "🎨 Painting received! Executing code..."
 #   eval code_string
+# end
+
+
+# The Hardened Dispatcher
+# live_loop :art_code_runner do
+#   use_real_time
+#   res = sync "/osc*/run-code"
+
+#   # 1. Extract and Clean the String
+#   raw_code = res[0].to_s
+
+#   # 2. Safety Scrubbing
+#   # Removes markdown ticks if they escaped the Python filter
+#   clean_code = raw_code.gsub("```ruby", "").gsub("```", "")
+
+#   # Fixes common AI chord/synth naming hallucinations
+#   clean_code = clean_code.gsub(':major9', ':maj9')
+#   .gsub(':plucked', ':pluck')
+#   .gsub('\"', '"') # Fixes escaped quotes
+
+#   puts "🎨 Painting received! Executing sanitized code..."
+
+#   begin
+#     # We clear previous loops to prevent "ghost" sounds overlapping
+#     stop if look > 0
+#     eval clean_code
+#   rescue Exception => e
+#     # This will now give you a much clearer explanation of exactly which line failed
+#     puts "❌ Code Error: #{e.message}"
+#     puts "Full code received was: #{clean_code}"
+#   end
 # end
